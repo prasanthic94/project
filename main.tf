@@ -2,14 +2,14 @@ provider "aws" {
   region     = var.aws_region
 }
 
-resource "aws_instance" "webapplication" {
+resource "aws_instance" "webapplication1" {
   ami           = var.aws_instance
   instance_type = var.instance_type
   key_name      = "terraform-jenkins"
 #   security_groups = [aws_security_group.applcation_sg.name]
 #   count = 1
   tags = {
-    Name = "webapplication"
+    Name = "webapplication1"
   }
 }
 # resource "aws_key_pair" "application" {
